@@ -4,10 +4,10 @@ POST http://localhost:3005/register/
 Content-Type: application/json
 
 {   
-    "name":"rahul",
+    "name":"ramesh",
     "phone":"982989123",
-    "email": "rahul@gmail.com",
-    "password": "rahul"
+    "email": "ramesh@gmail.com",
+    "password": "ramesh"
     
 }
 
@@ -18,9 +18,16 @@ POST http://localhost:3005/login/
 Content-Type: application/json
 
 {
-    "name":"sudharshan",
-    "password": "siddu"
+    "name":"ganesh",
+    "password": "ganesh"
 }
 
 ###
 GET http://localhost:3005/users/
+
+###
+GET http://localhost:3005/users/1/
+
+
+###
+DELETE http://localhost:3005/users/3/
