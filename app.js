@@ -86,3 +86,20 @@ app.post("/login", async (request, response) => {
     }
   }
 });
+
+app.get("/users/:userId/", async (request, response) => {
+  const { userId } = request.params;
+  const userdetailsquery = `SELECT * FROM user WHERE id = ${userId};`;
+  const res1 = await db.get(userdetailsquery);
+  response.send(res1);
+});
+
+//API-5 delete method
+app.delete("/users/:userId/", async (request, response) => {
+  const { userId } = request.params;
+  const deletequery = `DELETE FROM user WHERE id = ${userId};`;
+  const res4 = await db.run(deletequery);
+  response.send("Todo Deleted");
+});
+
+module.exports = app;
